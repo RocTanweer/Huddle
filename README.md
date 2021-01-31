@@ -7,6 +7,6 @@ A Landing page for a fictional **community building** website
 - Flex Box
 - Vs Code
 
-You may visit the site [here](https://github.com/RocTanweer/Huddle)
+You may visit the site [here](https://roctanweer.github.io/Huddle/)
 
 ![Huddle-Landing-Page](./images/desktop.jpg)
