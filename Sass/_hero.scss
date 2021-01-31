@@ -1,0 +1,80 @@
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__image{
+        margin-right: 2rem;
+
+        img{
+            @include responsive(large){
+                width: 100%;
+            }
+        }
+
+        @include responsive(tab){
+            margin-right: 0;
+        }
+
+        @include responsive(large){
+            margin-right: 0;
+            width: 34rem;
+        }
+
+        @include responsive(small){
+            width: 18rem;
+        }
+    }
+
+    &__text{
+        padding-top: 3rem;
+        height: 30.8rem;
+        max-width: 30.75rem;
+
+        @include responsive(tab){
+            text-align: center;
+        }
+
+        @include responsive(large){
+            height: 28.8rem;
+        }
+        @include responsive(small){
+            height: 23.8rem;
+        }
+
+
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 41px;
+            line-height: 1.5;
+            font-weight: 700;
+
+            @include responsive(small){
+                font-size: 1.35rem;
+            }
+            @include responsive(large){
+                line-height: 1.3;
+            }
+        }
+
+        p{
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            
+             @include responsive(small){
+                font-size: .9rem;
+            }
+        }
+    }
+
+    
+}
+
+.btn{
+    @include responsive(tab){
+        padding: 1.32rem 5.15rem;
+    }
+}

@@ -1,0 +1,125 @@
+html{
+    font-size: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+body{
+    height: auto;
+    width: 100%;
+    padding: 4rem 5rem 2.5rem 5rem;
+    background-color: $violet;
+    color: #ffffff;
+    background-image: url('../images/bg-desktop.svg');
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: $poppins;
+    
+    @include responsive(large){
+        background-image: url('../images/bg-mobile.svg');
+        background-size: contain;
+        background-position: center top;
+        height: auto;
+    }
+
+    @include responsive(small){
+        padding: 2.5rem;
+        background-size: contain;
+        background-position: center top;
+    }
+    
+}
+
+header{
+    margin-bottom: 6.25rem;
+    img{
+        width: 12.625rem;
+
+        @include responsive(small){
+            width : 7.5625rem;
+        }
+    }
+
+    @include responsive(small){
+        margin-bottom: 4.21rem;
+    }
+}
+
+
+
+.btn{
+    display: inline-block;
+    color: $violet;
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 1.32rem 4rem;
+    margin-top: 1.6rem;
+    border-radius: 28px;
+    transition: background-color  150ms ease-in-out;
+
+
+    &:visited{
+        text-decoration: none;
+    }
+
+    &:hover{
+        background-color: $magenta;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        color: $violet;
+        background-color: #ffffff;
+    }
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    @include responsive(tab){
+        justify-content: center;
+    }
+
+    a{
+        margin-right: 15px;
+
+
+        i.fab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        transition: all 150ms ease-in-out; 
+        
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:hover{
+        i.fab{
+            color: $magenta;
+            border: 1px solid $magenta;
+            transform: translateY(-10px);
+        }
+    }
+    }
+}
